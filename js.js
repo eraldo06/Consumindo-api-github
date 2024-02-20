@@ -58,12 +58,14 @@ function getAllData(){
         
     <div class="user-info">
     <div class="user-avatar">
-        <h2 class="user-name">${user.name}</h2>
-        <h3 class="user-login">${user.login}</h3>
-        <img class="avatar_img" src="${user.avatar_url}" alt="${user.login}">
-        <p class="bio">${user.bio}</p>
+    <h2 class="user-name">${user.name == null ? user.name = "No username" : user.name}</h2>
+    <h3 class="user-login">${user.login}</h3>
+    <img class="avatar_img" src="${user.avatar_url}" alt="${user.login}">
+    <p class="bio">${
+      user.bio == null ? (user.bio = "No bio") : user.bio
+    }</p>
     </div>
-    <div class="user-status">
+    <div class="user-stats">
         <h2>Info</h2>
         <p>Repos: ${user.public_repos}</p>
         <p>Followers: ${user.followers}</p>
